@@ -20,6 +20,7 @@ from typing import AsyncIterator, Callable
 from .exceptions import CircularEmitError
 from .handler import Handler, AsyncCallable
 from .matching import matches
+from typing import Any, AsyncIterator, Callable
 
 logger = logging.getLogger(__name__)
 
