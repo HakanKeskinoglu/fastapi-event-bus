@@ -56,7 +56,7 @@ class EventBus:
     # Emit
     # ------------------------------------------------------------------ #
 
-    async def emit(self, event: str, payload: dict) -> None:
+    async def emit(self, event: str, payload: dict[str, Any]) -> None:
         """
         Emit an event. All matching handlers run concurrently.
 

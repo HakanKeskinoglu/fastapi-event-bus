@@ -21,7 +21,7 @@ class Handler:
         self.pattern = pattern
         self.is_wildcard = is_wildcard
 
-    async def __call__(self, event: str, payload: dict) -> None:
+    async def __call__(self, event: str, payload: dict[str, Any]) -> None:
         """
         Call the underlying function with the appropriate signature.
 
@@ -36,4 +36,3 @@ class Handler:
     def __repr__(self) -> str:
         kind = "wildcard" if self.is_wildcard else "exact"
         return f"<Handler pattern={self.pattern!r} kind={kind} fn={self.fn.__name__!r}>"
-        
